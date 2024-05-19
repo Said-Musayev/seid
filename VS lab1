@@ -1,0 +1,13 @@
+import math
+p = 0
+eps = 0.01
+x = 0.2
+z = 1  
+fakt = 1
+i = 1
+while math.fabs(z) > eps:
+    p = p + z  
+    fakt *= i * (i + 1)  
+    z = (((-1)**(i+1)) * math.sin(x ** i))/ fakt
+    i = i + 1
+print(p)
