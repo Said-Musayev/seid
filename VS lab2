@@ -1,0 +1,7 @@
+B = [2, 5, 3, 8, 6, 1, 9, 4, 7]
+toplam = 0
+for i in range(len(B)):
+    if i % 2 != 0:  
+        toplam += B[i]
+print("Tek indeksli elementlerın cemi:", toplam)
+
