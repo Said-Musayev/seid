@@ -1,0 +1,16 @@
+import math
+X = [
+    [0.1, 0.2, 0.3],
+    [0.4, 0.5, 0.6],
+    [0.7, 0.8, 0.9]
+]
+Y = []
+for row in X:
+    temp_row = []  
+    for element in row:
+        sin_value = math.sin(element)  
+        temp_row.append(sin_value)  
+    Y.append(temp_row) 
+print("sin(x) qiymetleri:")
+for row in Y:
+    print(row)
