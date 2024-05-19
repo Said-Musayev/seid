@@ -1,0 +1,23 @@
+import random
+lst = []
+for i in range(10):
+    number = random.randint(0, 101)
+    lst.append(number)
+print("lst =", lst)
+with open('file.txt', 'w') as f:
+    f.write(str(len(lst)) + '\n')
+    f.write(' '.join(map(str, lst)))
+with open('file.txt', 'r') as f:
+    s = f.readline()
+    lst2 = []
+    for line in f:
+        strs = line.split()
+        for s in strs:
+            if s != '':
+                lst2.append(int(s))
+print('lst2 =', lst2)
+b = [x for x in lst2 if x % 2 == 0]
+print('Cut ededler:', b)
+with open('file.txt', 'a') as f:
+    f.write(str(len(b)) + '\n')
+    f.write(' '.join(map(str, b)))
